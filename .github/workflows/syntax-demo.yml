@@ -9,19 +9,19 @@ on:
 
 jobs:
   demonstrate-syntax:
-  runs-on: ubuntu-latest
-  steps:
-    # Step 1: Uses a marketplace action to pull the code
-    - name: Get the Code
-      uses: actions/checkout@v4
-
-    # Step 2: Runs a single shell command
-    - name: Check server OS
-      run: cat /etc/os-release
-
-    # Step 3: Runs MULTIPLE shell commands using the pipe '|' character
-    - name: Run Multiple Commands
-      run: |
-        echo "Line 1"
-        echo "Line 2"
-        ls -la
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Uses a marketplace action to pull the code
+      - name: Get the Code
+        uses: actions/checkout@v4
+  
+      # Step 2: Runs a single shell command
+      - name: Check server OS
+        run: cat /etc/os-release
+  
+      # Step 3: Runs MULTIPLE shell commands using the pipe '|' character
+      - name: Run Multiple Commands
+        run: |
+          echo "Line 1"
+          echo "Line 2"
+          ls -la
