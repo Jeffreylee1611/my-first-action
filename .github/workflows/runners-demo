@@ -1,0 +1,15 @@
+name: Multi-OS Runner Demo
+on: [push]
+
+jobs:
+  linux-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print OS Info (Linux)
+        run: uname -a # Linux command
+        
+  windows-job:
+    runs-on: windows-latest
+    steps:
+      - name: Print OS Info (Windows)
+        run: systeminfo # Windows command
