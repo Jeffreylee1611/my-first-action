@@ -1,0 +1,9 @@
+name: My First Workflow
+on: [push] # This triggers the workflow every time you push code
+
+jobs:
+  hello-world-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello, World! Welcome to DevOps."
