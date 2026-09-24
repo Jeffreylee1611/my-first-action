@@ -10,10 +10,3 @@ jobs:
       - run: sleep 10 # Simulating a 10-second test
       - run: echo "Backend tests passed!"
 
-  # JOB 2: Frontend Testing
-  frontend-tests:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Starting frontend tests..."
-      - run: sleep 10 # Simulating a 10-second test
-      - run: echo "Frontend tests passed!"
