@@ -1,9 +1,19 @@
-name: My First Workflow
-on: [push] # This triggers the workflow every time you push code
+name: Parallel Jobs Demo
+on: [push]
 
 jobs:
-  hello-world-job:
+  # JOB 1: Backend Testing
+  backend-tests:
     runs-on: ubuntu-latest
     steps:
-      - name: Say Hello
-        run: echo "Hello, World! Welcome to DevOps."
+      - run: echo "Starting backend tests..."
+      - run: sleep 10 # Simulating a 10-second test
+      - run: echo "Backend tests passed!"
+
+  # JOB 2: Frontend Testing
+  frontend-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Starting frontend tests..."
+      - run: sleep 10 # Simulating a 10-second test
+      - run: echo "Frontend tests passed!"
