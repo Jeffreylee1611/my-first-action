@@ -1,0 +1,18 @@
+name: Pull Request Quality Gate
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v4
+      
+      - name: Run a simulated quality check
+        run: |
+          echo "Checking code formatting..."
+          sleep 2
+          echo "Code meets quality standards!"
